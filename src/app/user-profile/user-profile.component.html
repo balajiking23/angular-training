@@ -1,3 +1,10 @@
-<p>user-profile works!</p>
+<p>User Profiles</p>
 
-<button type="button" (click)="getuserData()">Profile</button>
+<!-- <button type="button" (click)="getuserData()">Profile</button> -->
+
+<div *ngFor="let obj of numList">
+    <p>User Profile
+   {{obj}}
+</p>
+
+</div>

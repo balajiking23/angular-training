@@ -9,14 +9,23 @@ import { Router } from '@angular/router';
 })
 export class ForgetPasswordComponent {
 
+  public dataCheck = true;
+  public otpCheck = false;
+  public passwordcheck = false;
+
   constructor( 
     private router: Router, 
+    
     ){} 
 
   form = new FormGroup({
     "firstName": new FormControl("", Validators.required),
     "password": new FormControl("", Validators.required),
     "cpassword": new FormControl("", Validators.required),
+    "email": new FormControl("", Validators.required),
+    "email1": new FormControl("", Validators.required),
+    "otp": new FormControl("", Validators.required),
+    "cotp": new FormControl("", Validators.required),
 });
 
 onSubmit() {
@@ -27,5 +36,34 @@ console.log(this.form);
 login(){
   this.router.navigate(['']);
 }
+
+forgetPass(){
+  if(this.form.get("firstName")?.value!=''&&this.form.get("email")?.value!=''){
+ 
+    this.dataCheck=false;
+    this.otpCheck=true;
+  }
+ 
+}
+
+
+otp(){
+  if(this.form.get("email1")?.value!=''&&this.form.get("otp")?.value!=''&&this.form.get("cotp")?.value!=''){
+  this.otpCheck=false;
+  this.passwordcheck=true;
+}
+}
+
+passwordCheck(){
+  if(this.form.get("password")?.value!=''&&this.form.get("cpassword")?.value!=''){
+  this.passwordcheck=false;
+}
+}
+profile(){
+  this.router.navigate(['profile']);
+  console.log(this.form);
+ 
+}
+
 
 }

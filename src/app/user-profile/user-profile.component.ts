@@ -8,6 +8,8 @@ import { ApiService } from 'src/service/api.service';
 })
 export class UserProfileComponent {
 
+  public numList = [];
+
   constructor(private api: ApiService ) { }
 
   getuserData(){
