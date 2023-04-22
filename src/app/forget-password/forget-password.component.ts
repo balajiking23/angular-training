@@ -39,9 +39,10 @@ login(){
 
 forgetPass(){
   if(this.form.get("firstName")?.value!=''&&this.form.get("email")?.value!=''){
- 
+    alert("Please fill out this field!");
     this.dataCheck=false;
     this.otpCheck=true;
+   
   }
  
 }

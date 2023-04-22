@@ -1,10 +1,20 @@
 <p>User Profiles</p>
 
-<!-- <button type="button" (click)="getuserData()">Profile</button> -->
+<button type="button" (click)="getuserData()">Profile</button>
 
 <div *ngFor="let obj of numList">
-    <p>User Profile
-   {{obj}}
-</p>
 
+  <div class="card-container">
+      <div class="card">
+        <img src="{{ obj.avatar }}" alt="Avatar">
+        <div class="card-content">
+          <h4>{{ obj.name }}</h4>
+          <p>ID: {{ obj.id }}</p>
+          <p>Created At: {{ obj.createdAt }}</p>
+        </div>
+      </div>
+  </div>
+  
+
+  
 </div>
