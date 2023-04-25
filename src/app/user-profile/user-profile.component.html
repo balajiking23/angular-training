@@ -8,10 +8,11 @@
   <div class="card-container">
       <div class="card">
         <img src="{{ obj.avatar }}" alt="Avatar">
+        <!-- <img src="assets/icon/img_avatar.jpg"  style="height: 80px; width: 80px;"   alt="Avatar"> -->
         <div class="card-content">
           <h4>{{ obj.name }}</h4>
           <p>ID: {{ obj.id }}</p>
-          <p>Created At: {{ obj.createdAt }}</p>
+          <p>Created At: {{ obj.createdAt | date}}</p>
         </div>
       </div>
   </div>
