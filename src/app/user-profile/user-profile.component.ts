@@ -46,6 +46,11 @@ export class UserProfileComponent implements OnInit {
     let profile_id = windowUrl.searchParams.get("profile_id") ? windowUrl.searchParams.get("profile_id") :0
      console.log(profile_id);
 
+     setTimeout(() => {
+
+      console.log("delay");
+      
+     }, 30000);
     
   }
 
