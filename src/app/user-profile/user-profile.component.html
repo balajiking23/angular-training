@@ -3,6 +3,8 @@
     See All Profile
   </button>
 
+
+<div *ngIf="profile_id==0">
 <div *ngFor="let obj of numList">
 
   <div class="card-container">
@@ -16,7 +18,23 @@
         </div>
       </div>
   </div>
-  
+</div>
+</div>
+
+
+
+<div *ngIf="buttonclicked==1">
+  <div class="card-container">
+    <div class="card">
+      <!-- <img src="{{ obj.avatar }}" alt="Avatar"> -->
+      <img src="assets/icon/img_avatar.jpg"  style="height: 80px; width: 80px;"   alt="Avatar">
+      <div class="card-content">
+        <h4>Name:{{ name }}</h4>
+        <p>ID: {{ id }}</p>
+        <p>Created At: {{ createdAt | date}}</p>
+      </div>
+    </div>
+</div>
+</div>
 
   
-</div>
