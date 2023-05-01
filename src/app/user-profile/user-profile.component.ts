@@ -26,21 +26,22 @@ export class UserProfileComponent {
   getuserData() {
 
     this.api.fetchData().subscribe(res => {
-      
+
       this.numList = res
       console.log(this.numList);
 
       let windowUrl = new URL(window.location.href);
 
       this.profile_id = windowUrl.searchParams.get("profile_id") ? windowUrl.searchParams.get("profile_id") : 0
+      console.log(this.profile_id);
 
 
       if (this.profile_id > 0) {
         this.buttonclicked = 1
       }
       for (let i = 0; i < this.numList.length; i++) {
- 
-       if (this.profile_id == this.numList[i].id) {
+
+        if (this.profile_id == this.numList[i].id) {
           this.name = this.numList[i].name;
           this.id = this.numList[i].id;
           this.createdAt = this.numList[i].createdAt;
@@ -63,7 +64,6 @@ export class UserProfileComponent {
   //   this.now.setDate( this.now.getDate() + 3 );
   //   console.log(this.now);
 
-
   //    setTimeout(() => {
 
   //     console.log("delay");
@@ -84,8 +84,6 @@ export class UserProfileComponent {
   //       clearInterval(Delay);
 
   //     }
-
-
 
   //   });
 
