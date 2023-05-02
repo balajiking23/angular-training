@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-
+public amount="150";
   
   constructor( 
     private router: Router, 
@@ -23,5 +23,7 @@ export class LoginComponent {
   forget(){
     this.router.navigate(['/forgetPassword']);
   }
+
+  
 
 }

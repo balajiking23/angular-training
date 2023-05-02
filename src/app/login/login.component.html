@@ -1,26 +1,33 @@
 <h2>Login Form</h2>
 
-		<div class="container">
-			<label for="username"><b>Username</b></label>
-			<input type="text" placeholder="Enter Username" name="username" required>
+<div class="container">
+	<label for="username"><b>Username</b></label>
+	<input type="text" placeholder="Enter Username" name="username" required>
 
-			<label for="password"><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="password" required>
+	<label for="password"><b>Password</b></label>
+	<input type="password" placeholder="Enter Password" name="password" required>
 
-			<button type="submit" >Login</button>
-			<label>
-				<input type="checkbox" checked="checked" name="remember"> Remember me
-			</label>
+	<button type="submit">Login</button>
+	<label>
+		<input type="checkbox" checked="checked" name="remember"> Remember me
+	</label>
 
-			<!-- <label>
+	<!-- <label>
 				<span class="forget" (click)="forget()"> Foget Password</span>
 			</label> -->
-			<a href="forgetPassword">Foget Password</a>
+	<a href="forgetPassword">Foget Password</a>
 
-		</div>
+</div>
 
-		<div class="container" style="background-color:#f1f1f1">
-			<button type="button" (click)="signup()">Sign up</button>
-			<!-- <span class="psw"><a href="signup">Sign Up </a></span> -->
-            
-		</div>
+<div class="container" style="background-color:#f1f1f1">
+	<button type="button" (click)="signup()">Sign up</button>
+	<!-- <span class="psw"><a href="signup">Sign Up </a></span> -->
+
+</div>
+
+<div  class="container">
+	{{amount}}
+	{{amount | currency}}
+	{{amount | currency:"INR$"}}
+	<!-- {{amount | currency:"USD$":0}} -->
+</div>
